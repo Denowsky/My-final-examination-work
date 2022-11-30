@@ -13,9 +13,8 @@ string InpMessage(string message) // просим ввести данные
     return Console.ReadLine();
 }
 
-void FillArray(string[] array) // заполняем массив и выводим его
+void FillArray(string[] array) // заполняем массив
 {
-
     for(int i = 0; i<array.Length;i++)
     {
         array[i] = InpMessage($"Введите значение {i+1} элемента: ");
