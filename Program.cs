@@ -24,7 +24,25 @@ void FillArray(string[] array) // заполняем массив
 
 void FilterArray(string[] array, string[] array2) //фильтруем массив по условию x<=3 символа и собираем новый
 {
-    
+    int count = 0;
+    for(int i = 0; i<array.Length;i++)
+    {
+        if(array[i].Length<=3)
+            count++;
+    }
+    if(count>0)
+        Array.Resize(ref array2, count);
+    else Console.WriteLine("Во введёном массиве нет элементов, подходящих условиям.");
+    count = 0;
+    for(int i = 0; i<array.Length;i++)
+    {
+        if(array[i].Length<=3)
+        {
+            array[i] = array2[count];
+            Console.Write(array2[count]);
+            count++;
+        }
+    }
 }
 
 
@@ -33,4 +51,6 @@ void FilterArray(string[] array, string[] array2) //фильтруем масс�
 Console.WriteLine("Введите количество элементов массива: ");
 int size = Convert.ToInt32(Console.ReadLine());
 string[] MyArray = new string[size];
+string[] FiltredArray = new string[size];
 FillArray(MyArray);
+FilterArray(MyArray,FiltredArray);
