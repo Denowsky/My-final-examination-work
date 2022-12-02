@@ -38,7 +38,7 @@ void FilterArray(string[] array) //фильтруем массив по усло
         Console.Write(" -> ");
         PrintArray(array);
     }
-    else Console.WriteLine("Во введёном массиве нет элементов, подходящих условиям.");
+    else Console.WriteLine("[]");
 }
 
 void PrintArray(string[] array)
