@@ -1,12 +1,4 @@
-/*
-Написать программу, которая из имеющегося массива строк формирует массив из строк, 
-длинна которых меньше либо равна 3 символа. 
-Первоналчальный массив можно принять вводом, либо задать захардкодить. 
-При решении коллекции не желательны, работа с массивами в приоритете.
-Пример: ["Hello", "2", "world", ":-)"] -> ["2", ":-)"]
-*/
-
-//methods
+﻿//methods
 string InpMessage(string message) // просим ввести данные
 {
     Console.WriteLine(message);
@@ -61,3 +53,4 @@ string[] FiltredArray = new string[size];
 FillArray(MyArray);
 PrintArray(MyArray);
 FilterArray(MyArray);
+Console.WriteLine();
